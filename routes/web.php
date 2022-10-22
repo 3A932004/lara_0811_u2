@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //設定 Route 回傳 view
+/*
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+//設定 Route 回傳字串
+Route::get('/', function () {
+    return 'welcome';
 });
