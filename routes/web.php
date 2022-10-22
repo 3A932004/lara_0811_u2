@@ -38,3 +38,9 @@ Route::get('r1', function() {
 Route::get('hello/{name?}', function ($name = 'Everybody'){
     return 'Hello, '.$name;
 });
+
+//3.增加新的 Route
+Route::get('test', function (){
+    return 'test';
+});
+
