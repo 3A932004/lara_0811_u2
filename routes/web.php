@@ -23,3 +23,11 @@ Route::get('/', function () {
 Route::get('/', function () {
     return 'welcome';
 });
+
+Route::get('r2', function() {
+    return view('welcome');
+});
+//設定 Route 跳轉路由
+Route::get('r1', function() {
+    return redirect('r2');
+});
