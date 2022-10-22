@@ -31,3 +31,8 @@ Route::get('r2', function() {
 Route::get('r1', function() {
     return redirect('r2');
 });
+
+//設定 Route 接受參數
+Route::get('hello/{name}', function ($name){
+    return 'Hello, '.$name;
+});
