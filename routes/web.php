@@ -44,3 +44,14 @@ Route::get('test', function (){
     return 'test';
 });
 
+//5-1.設定 dashboard 路徑的 Route
+Route::get('dashboard', function (){
+    return 'dashboard';
+});
+
+//5-2.設定另一個 Route 以群組包起來設定 prefix
+Route::group(['prefix' => 'admin'], function(){
+   Route::get('dashboard', function (){
+       return 'admin dashboard';
+   });
+});
