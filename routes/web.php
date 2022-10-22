@@ -32,7 +32,9 @@ Route::get('r1', function() {
     return redirect('r2');
 });
 
-//設定 Route 接受參數
-Route::get('hello/{name}', function ($name){
+//修改 Route 接受參數
+//Route::get('hello/{name}', function ($name){
+//修改參數成選擇性
+Route::get('hello/{name?}', function ($name = 'Everybody'){
     return 'Hello, '.$name;
 });
